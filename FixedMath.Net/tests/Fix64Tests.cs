@@ -956,7 +956,7 @@ namespace FixMath.NET
         }
 
         [Fact]
-        public void Equals()
+        public void EqualsTest()
         {
             foreach (var op1 in m_testCases)
             {

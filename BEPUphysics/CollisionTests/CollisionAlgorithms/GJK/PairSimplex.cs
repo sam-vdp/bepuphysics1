@@ -824,9 +824,9 @@ namespace BEPUphysics.CollisionTests.CollisionAlgorithms.GJK
                 simplex.SimplexB.B = B2;
                 simplex.SimplexB.C = C2;
                 simplex.State = SimplexState.Triangle;
-                Fix64 denom = F64.C1 / (va + vb + vc);
-                simplex.W = vc * denom;
-                simplex.V = vb * denom;
+                Fix64 denom = (va + vb + vc);
+                simplex.W = vc / denom;
+                simplex.V = vb / denom;
                 simplex.U = F64.C1 - simplex.V - simplex.W;
                 Vector3.Multiply(ref ab, simplex.V, out point);
                 Vector3 acw;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//#define CHECKMATH
+
+using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 
@@ -253,8 +255,8 @@ namespace FixMath.NET
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Fix64 operator +(Fix64 x, Fix64 y) {
 #if CHECKMATH
-			var xl = x.m_rawValue;
-            var yl = y.m_rawValue;
+			var xl = x.RawValue;
+            var yl = y.RawValue;
             var sum = xl + yl;
             // if signs of operands are equal and signs of sum and x are different
             if (((~(xl ^ yl) & (xl ^ sum)) & MIN_VALUE) != 0) {
@@ -286,8 +288,8 @@ namespace FixMath.NET
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Fix64 operator -(Fix64 x, Fix64 y) {
 #if CHECKMATH
-			var xl = x.m_rawValue;
-            var yl = y.m_rawValue;
+			var xl = x.RawValue;
+            var yl = y.RawValue;
             var diff = xl - yl;
             // if signs of operands are different and signs of sum and x are different
             if ((((xl ^ yl) & (xl ^ diff)) & MIN_VALUE) != 0) {
@@ -322,8 +324,8 @@ namespace FixMath.NET
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Fix64 operator *(Fix64 x, Fix64 y) {
 #if CHECKMATH
-			var xl = x.m_rawValue;
-            var yl = y.m_rawValue;
+			var xl = x.RawValue;
+            var yl = y.RawValue;
 
             var xlo = (ulong)(xl & 0x00000000FFFFFFFF);
             var xhi = xl >> FRACTIONAL_PLACES;
