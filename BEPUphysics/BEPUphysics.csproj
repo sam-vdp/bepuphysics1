@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net471</TargetFramework>
     <Platforms>AnyCPU;x64;x86</Platforms>
     <PackageLicenseUrl>https://github.com/bepu/bepuphysics1/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bepu/bepuphysics1</PackageProjectUrl>
