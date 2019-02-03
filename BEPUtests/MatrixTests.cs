@@ -31,7 +31,7 @@ namespace BEPUtests
 		public MatrixTests(ITestOutputHelper output)
 		{
 			if (output == null)
-				output = new ConsoleTestOutputHelper();
+				output = new FixMath.NET.ConsoleTestOutputHelper();
 			this.output = output;
 		}
 
