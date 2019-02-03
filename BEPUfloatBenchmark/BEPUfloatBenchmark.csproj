@@ -34,13 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BEPUik">
-      <HintPath>lib\BEPUik.dll</HintPath>
+      <HintPath>libs BEPU 28a6eda\BEPUik.dll</HintPath>
     </Reference>
     <Reference Include="BEPUphysics">
-      <HintPath>lib\BEPUphysics.dll</HintPath>
+      <HintPath>libs BEPU 28a6eda\BEPUphysics.dll</HintPath>
     </Reference>
     <Reference Include="BEPUutilities">
-      <HintPath>lib\BEPUutilities.dll</HintPath>
+      <HintPath>libs BEPU 28a6eda\BEPUutilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
