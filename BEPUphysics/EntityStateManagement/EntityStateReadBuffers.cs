@@ -23,7 +23,7 @@ namespace BEPUphysics.EntityStateManagement
             {
                 if (base.Enabled && !value)
                 {
-                    if (!manager.InterpolatedStates.Enabled)
+                    if (manager.InterpolatedStates.Enabled)
                         throw new InvalidOperationException("Cannot disable read buffers unless the interpolated states are disabled.");
                     Disable();
                     base.Enabled = false;
